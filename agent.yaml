@@ -1,0 +1,20 @@
+name: concept_linker_agent
+description: Links any two concepts into a creative bridge prompt.
+version: 1.0.0
+
+capabilities:
+  - id: link_concepts
+    description: Generate a creative prompt linking two concepts.
+    input_schema:
+      type: object
+      properties:
+        concept1:
+          type: string
+        concept2:
+          type: string
+      required: [concept1, concept2]
+    output_schema:
+      type: object
+      properties:
+        prompt:
+          type: string
